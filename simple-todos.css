@@ -80,6 +80,11 @@ ul {
     position: relative;
 }
 
+.delete:hover {
+    color: red;
+    font-size: 2.05em;
+}
+
 li {
     position: relative;
     list-style: none;
