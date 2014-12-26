@@ -85,12 +85,24 @@ Meteor.methods({
       username: Meteor.user().username
     });
   },
+
   deleteTask: function (taskId) {
+    var task = Tasks.findOne(taskId);
+    if (task.private && task.owner !== Meteor.userId()) {
+      // If the task is private, make sure only the owner can delete it
+      throw new Meteor.Error("not-authorized");
+    }
     Tasks.remove(taskId);
   },
+
   setChecked: function (taskId, setChecked) {
-    Tasks.update(taskId, { $set: { checked: setChecked} });
+    var task = Tasks.findOne(taskId);
+    if (task.private && task.owner !== Meteor.userId()) {
+      // If the task is private, make sure only the owner can check it off
+      throw new Meteor.Error("not-authorized");
+    } else Tasks.update(taskId, { $set: { checked: setChecked} });
   },
+
   setPrivate: function (taskId, setToPrivate) {
     var task = Tasks.findOne(taskId);
     if (task.owner !== Meteor.userId()) {
