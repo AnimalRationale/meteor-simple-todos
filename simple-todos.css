@@ -139,8 +139,16 @@ header .hide-completed {
         clear: both;
     }
 
-    .new-task input {
+    .xnew-task input {
         padding-bottom: 5px;
     }
+}
+
+.title-badge {
+    font-size: 1em;
+}
+
+.material-input-task {
+    padding-bottom: 20px;
 }
 

@@ -9,7 +9,7 @@
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <div class="panel-title">
-                    <h1>Todo List <span class="badge"> {{incompleteCount}} </span></h1>
+                    <h1>Todo List <span class="badge title-badge"> {{incompleteCount}} </span></h1>
                 </div>
                 <div class ="btn btn-normal login-btns">
                     {{> loginButtons}}
@@ -26,14 +26,16 @@
 
 
             {{#if currentUser}}
-                <div class="form-control-wrapper">
-                    <form class="new-task">
-                        <input class="form-control floating-label" type="text" name="text" id="focusedInput">
-                    </form>
-                    <div class="floating-label">
-                        Type here to add new task
+                <div class="form-group material-input-task">
+                    <div class="form-control-wrapper">
+                        <form class="new-task">
+                            <input class="form-control floating-label" type="text" name="text" id="focusedInput">
+                        </form>
+                        <div class="floating-label">
+                            Type here to add new task
+                        </div>
+                        <span class="material-input material-input-task"></span>
                     </div>
-                    <span class="material-input"></span>
                 </div>
             {{/if}}
         </div>
