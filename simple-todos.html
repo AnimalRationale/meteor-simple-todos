@@ -26,15 +26,17 @@
 
 
             {{#if currentUser}}
-                <div class="form-group material-input-task">
-                    <div class="form-control-wrapper">
-                        <form class="new-task">
-                            <input class="form-control floating-label" type="text" name="text" id="focusedInput">
-                        </form>
-                        <div class="floating-label">
-                            Type here to add new task
+                <div class="form-group">
+                    <div class="form-group">
+                        <div class="form-control-wrapper new-task">
+
+                                <input class="form-control floating-label" type="text" name="text" id="focusedInput">
+
+                            <div class="floating-label">
+                                Type here to add new task
+                            </div>
+                            <span class="material-input"> </span>
                         </div>
-                        <span class="material-input material-input-task"></span>
                     </div>
                 </div>
             {{/if}}
@@ -52,8 +54,9 @@
 <template name="task">
     <li class="well {{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
         <div>
-            <button class="delete"><i class="mdi-action-delete"></i></button>
+            <button class="delete"><i class="mdi-action-delete center"></i></button>
         </div>
+        <span class="label label-success">{{username}}</span>
         <div class="checkbox checkbox-primary">
             <label>
                 <input type="checkbox" checked="{{checked}}" class="toggle-checked " />
@@ -70,7 +73,7 @@
                 </button>
             {{/if}}
         </div>
-        <span class="label label-success">{{username}}</span>
+
         <span class="text">{{text}}</span>
 
     </li>
