@@ -6,6 +6,14 @@ if (Meteor.isClient) {
 
   Meteor.subscribe("tasks");
 
+  Template._loginButtonsLoggedInDropdown.events({
+    'click #login-buttons-edit-profile': function(event) {
+      event.stopPropagation();
+      Template._loginButtons.toggleDropdown();
+      Router.go('profileEdit');
+    }
+  });
+
   Template.body.helpers({
     tasks: function () {
       if (Session.get("hideCompleted")) {

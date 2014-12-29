@@ -105,6 +105,7 @@ li {
 
 li .text {
     margin-left: 10px;
+    color: #000;
 }
 
 li.checked {
