@@ -1,6 +1,7 @@
 <!-- simple-todos.html -->
 <head>
     <title>Todo List</title>
+
 </head>
 
 <body>
@@ -24,7 +25,6 @@
                 </div>
             </div>
 
-
             {{#if currentUser}}
                 {{#if currentUser}}
                     <form class="new-task">
@@ -44,6 +44,7 @@
         {{> task}}
       {{/each}}
     </ul>
+
 </div>
 </body>
 
@@ -52,7 +53,7 @@
         <div>
             <button class="delete"><i class="mdi-action-delete center"></i></button>
         </div>
-        <span class="label label-success">{{username}}</span>
+        <span class="label label-success test-surface">{{username}}</span>
         <div class="checkbox checkbox-primary">
             <label>
                 <input type="checkbox" checked="{{checked}}" class="toggle-checked " />
