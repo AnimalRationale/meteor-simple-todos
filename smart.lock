@@ -2,13 +2,19 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "accounts-ui-bootstrap-3": {}
+      "accounts-ui-bootstrap-3": {},
+      "famono": {}
     },
     "packages": {
       "accounts-ui-bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
         "tag": "v0.3.5",
         "commit": "bbd0a8a46ae02526c2ebfee05fa8075d8d04a9ba"
+      },
+      "famono": {
+        "git": "https://github.com/raix/Meteor-famono.git",
+        "tag": "v0.7.5",
+        "commit": "88998e06d5e6fce88086d72169b2f8ea39d47955"
       }
     }
   }
