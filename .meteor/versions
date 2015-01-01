@@ -12,7 +12,6 @@ blaze-tools@1.0.2
 boilerplate-generator@1.0.2
 callback-hook@1.0.2
 check@1.0.3
-coffeescript@1.0.5
 ddp@1.0.13
 deps@1.0.6
 ejson@1.0.5
@@ -20,14 +19,12 @@ email@1.0.5
 fastclick@1.0.2
 fezvrasta:bootstrap-material-design@0.2.1
 follower-livedata@1.0.3
-gadicohen:famous-views@0.1.17
 geojson-utils@1.0.2
 handlebars@1.0.2
 html-tools@1.0.3
 htmljs@1.0.3
 http@1.0.9
 id-map@1.0.2
-jag:pince@0.0.5
 jquery@1.0.2
 json@1.0.2
 launch-screen@1.0.1
@@ -44,7 +41,6 @@ mongo@1.0.11
 npm-bcrypt@0.7.7
 observe-sequence@1.0.4
 ordered-dict@1.0.2
-raix:famono@0.7.4
 random@1.0.2
 reactive-dict@1.0.5
 reactive-var@1.0.4
