@@ -34,11 +34,19 @@ header {
 
 #login-buttons {
     display: block;
-    padding-left: 25px;
+
 }
 
 .login-btns {
     float: right;
+}
+
+#login-username {
+    width: 68%;
+}
+
+#login-password {
+    width: 67%;
 }
 
 h1 {
@@ -137,9 +145,4 @@ header .hide-completed {
 
 .test-surface {
     background-color: #EBEBF1;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 300;
-    padding: 20px;
-    -webkit-user-select: none;
-    font-size: 18px;
 }

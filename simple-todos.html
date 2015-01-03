@@ -1,4 +1,3 @@
-<!-- simple-todos.html -->
 <head>
     <title>Todo List</title>
 
@@ -10,7 +9,7 @@
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <div class="panel-title">
-                    <h1>Todo List <span class="badge title-badge"> {{incompleteCount}} </span></h1>
+                    <h1>Todo List <span class="badge title-badge test-surface"> {{incompleteCount}} </span></h1>
                 </div>
                 <div class ="btn btn-normal login-btns">
                     {{> loginButtons}}
@@ -77,8 +76,4 @@
         <p><span class="text">{{text}}</span></p>
 
     </li>
-</template>
-
-<template name="_loginButtonsAdditionalLoggedInDropdownActions">
-    <button class="btn btn-default btn-block" id="login-buttons-edit-profile">Edit profile</button>
 </template>

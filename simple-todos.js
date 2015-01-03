@@ -1,4 +1,3 @@
-// simple-todos.js
 Tasks = new Mongo.Collection("tasks");
 
 if (Meteor.isClient) {
