@@ -29,7 +29,7 @@
                 {{#if currentUser}}
                     <form class="new-task">
                         <div class="form-control-wrapper">
-                            <input class="form-control empty" name="text" placeholder="Type here to add new tasks">
+                            <input class="form-control empty" name="text" placeholder="Type here to add new task">
                             <span class="material-input"></span>
                         </div>
                     </form>
@@ -60,14 +60,17 @@
                 <span class="ripple"></span>
                 <span class="check"></span>
             </label>
+
             {{#if isOwner}}
-                <button class="btn btn-flat btn-warning btn-lg toggle-private">
-                    {{#if private}}
+                {{#if private}}
+                    <button class="btn btn-flat btn-info btn-lg toggle-private">
                         Private
-                    {{else}}
+                    </button>
+                {{else}}
+                    <button class="btn btn-flat btn-warning btn-lg toggle-private">
                         Public
-                    {{/if}}
-                </button>
+                    </button>
+                {{/if}}
             {{/if}}
         </div>
 
