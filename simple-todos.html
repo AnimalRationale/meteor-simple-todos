@@ -1,6 +1,6 @@
 <head>
     <title>Todo List</title>
-
+    <link id="rxF" rel="icon" href="/favicon.ico?v=3">
 </head>
 
 <body>
@@ -9,7 +9,7 @@
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <div class="panel-title">
-                    <h1>Todo List <span class="badge title-badge test-surface"> {{incompleteCount}} </span></h1>
+                    <h1>Todo List <span id="surf" class="badge title-badge test-surface"> {{incompleteCount}} </span></h1>
                 </div>
                 <div class ="btn btn-normal login-btns">
                     {{> loginButtons}}
@@ -21,6 +21,11 @@
                         <input type="checkbox" checked="{{hideCompleted}}" />
                         Hide Completed Tasks
                     </label>
+                </div>
+                <div class="btn btn-info">
+                    <span id="rxFavico">
+                        Hide Completed Tasks
+                    </span>
                 </div>
             </div>
 

@@ -5,14 +5,6 @@ if (Meteor.isClient) {
 
   Meteor.subscribe("tasks");
 
-  Template._loginButtonsLoggedInDropdown.events({
-    'click #login-buttons-edit-profile': function(event) {
-      event.stopPropagation();
-      Template._loginButtons.toggleDropdown();
-      Router.go('profileEdit');
-    }
-  });
-
   Template.body.helpers({
     tasks: function () {
       if (Session.get("hideCompleted")) {
@@ -29,7 +21,9 @@ if (Meteor.isClient) {
     },
 
     incompleteCount: function () {
-      return Tasks.find({checked: {$ne: true}}).count();
+      var counter = Tasks.find({checked: {$ne: true}}).count();
+      Meteor.call("showFavicon", counter);
+      return counter;
     }
   });
 
@@ -116,6 +110,13 @@ Meteor.methods({
       throw new Meteor.Error("not-authorized");
     }
     Tasks.update(taskId, { $set: { private: setToPrivate } });
+  },
+
+  showFavicon: function(count) {
+    var type;
+    type = (5 < count && count < 10) ? 'error' : 'info';
+    rxFavico.set('type', type);
+    return rxFavico.set('count', count);
   }
 });
 
