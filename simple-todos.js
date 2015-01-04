@@ -110,13 +110,6 @@ Meteor.methods({
       throw new Meteor.Error("not-authorized");
     }
     Tasks.update(taskId, { $set: { private: setToPrivate } });
-  },
-
-  showFavicon: function(count) {
-    var type;
-    type = (5 < count && count < 10) ? 'error' : 'info';
-    rxFavico.set('type', type);
-    return rxFavico.set('count', count);
   }
 });
 
