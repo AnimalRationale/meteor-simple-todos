@@ -440,12 +440,14 @@
             var url = '';
 //get link element
             var getLink = function() {
-                var link = document.getElementsByTagName('head')[0].getElementsByTagName('link');
-                for (var l = link.length, i = (l - 1); i >= 0; i--) {
-                    if ((/(^|\s)icon(\s|$)/i).test(link[i].getAttribute('rel'))) {
-                        return link[i];
-                    }
-                }
+                //var link = document.getElementsByTagName('head')[0].getElementsByTagName('link');
+                //for (var l = link.length, i = (l - 1); i >= 0; i--) {
+                //    if ((/(^|\s)icon(\s|$)/i).test(link[i].getAttribute('rel'))) {
+                //        return link[i];
+                //    }
+                //}
+                link = document.getElementById('favicon').cloneNode(true);
+                if (link != null) return link;
                 return false;
             };
             if (_opt.element) {
