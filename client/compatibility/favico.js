@@ -107,6 +107,7 @@
                     icon.ready();
                 }
             } catch(e) {
+                console.log('Error initializing favico. Message: ' + e.message);
                 throw 'Error initializing favico. Message: ' + e.message;
             }
         };

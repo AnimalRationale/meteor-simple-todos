@@ -4,6 +4,9 @@ if (Meteor.isClient) {
   // This code only runs on the client
 
   Meteor.subscribe("tasks");
+  var favicon = new Favico({
+    animation:'fade'
+  });
 
   Template.body.helpers({
     tasks: function () {
@@ -110,6 +113,9 @@ Meteor.methods({
       throw new Meteor.Error("not-authorized");
     }
     Tasks.update(taskId, { $set: { private: setToPrivate } });
+  },
+  showFavicon: function (counter) {
+    favicon.badge(counter);
   }
 });
 
