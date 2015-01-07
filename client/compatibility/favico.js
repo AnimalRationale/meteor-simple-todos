@@ -446,9 +446,11 @@
                 //        return link[i];
                 //    }
                 //}
-                link = document.getElementById('favicon').cloneNode(true);
-                if (link != null) return link;
-                return false;
+                link = "http://localhost:3000/favicon.ico";
+                console.log('Link: ' + link);
+                return link;
+
+                //return false;
             };
             if (_opt.element) {
                 elm = _opt.element;
