@@ -51,7 +51,7 @@
 <template name="task">
     <li class="well {{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
         <div>
-            <button class="btn btn-default btn-fab btn-raised delete"><i class="mdi-action-delete delete center"></i></button>
+            <button class="btn btn-default btn-fab btn-raised delete"><i class="mdi-action-delete delete center"></i><div class="ripple-wrapper"></div></button>
         </div>
         <span class="label label-success">{{username}}</span>
         <div class="checkbox checkbox-primary">
