@@ -77,14 +77,14 @@ ul {
 
 .delete {
     float: right;
-    background: none;
-    color: #888888;
-    font-size: 1.5em;
-    border: none;
     position: relative;
 }
 
-.delete:hover {
+.delete-icon {
+    color: #33ccff;
+}
+
+.delete-icon:hover {
     color: red;
 }
 
