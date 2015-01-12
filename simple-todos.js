@@ -5,10 +5,6 @@ if (Meteor.isClient) {
 
   Meteor.subscribe("tasks");
 
-  var favicon = new Favico({
-    animation:'fade'
-  });
-
   Template.body.helpers({
     tasks: function () {
       if (Session.get("hideCompleted")) {
@@ -26,7 +22,6 @@ if (Meteor.isClient) {
 
     incompleteCount: function () {
       var counter = Tasks.find({checked: {$ne: true}}).count();
-      Meteor.call("showFavicon", counter);
       return counter;
     }
   });
@@ -114,9 +109,6 @@ Meteor.methods({
       throw new Meteor.Error("not-authorized");
     }
     Tasks.update(taskId, { $set: { private: setToPrivate } });
-  },
-  showFavicon: function (counter) {
-    favicon.badge(counter);
   }
 });
 
