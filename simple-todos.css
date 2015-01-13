@@ -32,12 +32,6 @@ header {
     position: relative;
 }
 
-.task {
-    position:relative;
-    transition:all 300ms 0ms ease-in;
-}
-
-
 #login-buttons {
     display: block;
 
@@ -99,11 +93,13 @@ li {
     list-style: none;
     padding: 15px;
     border-bottom: #eee solid 1px;
+    transition:all 900ms 0ms ease-in;
 }
 
 li .text {
     margin-left: 10px;
     color: #000;
+    transition:all 900ms 0ms ease-in;
 }
 
 li.checked {

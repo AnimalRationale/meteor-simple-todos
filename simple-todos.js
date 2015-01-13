@@ -66,9 +66,11 @@ if (Meteor.isClient) {
   });
 
   Template.task.rendered = function(){
-    this.addClass("invisible");
-
-  }
+    $(function() {
+      $('#task-cont li').each(function(i) {
+        $(this).delay((i++) * 500).fadeTo(1000, 1); })
+    });
+  };
 
 
     Accounts.ui.config({
