@@ -78,7 +78,7 @@ ul {
     opacity: 0;
     position: relative;
     top: 20px;
-    transition: opacity 500ms, top 500ms;
+    transition: opacity 1500ms, top 700ms;
 }
 
 .task-cont.show {
