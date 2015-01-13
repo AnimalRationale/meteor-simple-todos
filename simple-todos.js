@@ -65,7 +65,13 @@ if (Meteor.isClient) {
     }
   });
 
-  Accounts.ui.config({
+  Template.task.rendered = function(){
+    this.addClass("invisible");
+
+  }
+
+
+    Accounts.ui.config({
     passwordSignupFields: "USERNAME_ONLY"
   });
 
