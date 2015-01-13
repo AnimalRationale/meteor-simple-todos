@@ -65,11 +65,8 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.task.rendered = function(){
-    $(function() {
-      $('#task-cont li').each(function(i) {
-        $(this).delay((i++) * 500).fadeTo(1000, 1); })
-    });
+  Template.task.rendered = function() {
+    this.$('.task-cont').toggleClass('show');
   };
 
 

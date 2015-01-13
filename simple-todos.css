@@ -34,7 +34,6 @@ header {
 
 #login-buttons {
     display: block;
-
 }
 
 .login-btns {
@@ -75,6 +74,18 @@ ul {
     background: white;
 }
 
+.task-cont {
+    opacity: 0;
+    position: relative;
+    top: 20px;
+    transition: opacity 500ms, top 500ms;
+}
+
+.task-cont.show {
+    opacity: 1;
+    top: 0
+}
+
 .delete {
     float: right;
     position: relative;
@@ -99,7 +110,6 @@ li {
 li .text {
     margin-left: 10px;
     color: #000;
-    transition:all 900ms 0ms ease-in;
 }
 
 li.checked {
