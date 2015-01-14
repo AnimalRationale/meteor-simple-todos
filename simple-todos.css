@@ -1,3 +1,5 @@
+html {overflow-y: scroll;}
+
 body {
     font-family: sans-serif;
     background-color: #fff;
@@ -29,7 +31,14 @@ header {
     background-image: linear-gradient(to bottom, #eee, #eee 100%);
     padding: 0px;
     margin-top: 10px;
-    position: relative;
+}
+
+.fade-in {
+    -webkit-transition: opacity 3s ease-in-out;
+    -moz-transition: opacity 3s ease-in-out;
+    -ms-transition: opacity 3s ease-in-out;
+    -o-transition: opacity 3s ease-in-out;
+    opacity: 1;
 }
 
 #login-buttons {

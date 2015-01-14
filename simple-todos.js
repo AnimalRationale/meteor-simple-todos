@@ -68,7 +68,7 @@ if (Meteor.isClient) {
   Template.task.rendered = function() {
     if (!this.rendered) {
       this.$('.task-cont').toggleClass('show');
-      this.rendered = true;
+      this.rendered = false;
     }
   };
 
