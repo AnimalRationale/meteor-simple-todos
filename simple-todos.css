@@ -76,18 +76,6 @@ ul {
     background: white;
 }
 
-.task-cont {
-    opacity: 0;
-    position: relative;
-    top: 20px;
-    transition: opacity 1500ms, top 700ms;
-}
-
-.task-cont.show {
-    opacity: 1;
-    top: 0
-}
-
 .delete {
     float: right;
     position: relative;
@@ -120,6 +108,7 @@ li.checked {
 
 li.checked .text {
     text-decoration: line-through;
+    transition:all 900ms 0ms ease-in;
 }
 
 li.private {
