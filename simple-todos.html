@@ -40,18 +40,20 @@
     </header>
 
     <ul>
-      {{#each tasks}}
-        {{> task}}
-      {{/each}}
+        {{#transition}}
+          {{#each tasks}}
+            {{> task}}
+          {{/each}}
+        {{/transition}}
     </ul>
 
 </div>
 </body>
 
 <template name="task">
-    <li class="well {{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
+    <li class="well fade {{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
         <div>
-            <button class="btn btn-default btn-fab btn-raised delete"><i class="mdi-action-delete delete-icon center"></i><div class="ripple-wrapper"></div></button>
+            <button class="btn btn-default btn-fab btn-raised delete"><i class="mdi-action-delete delete-icon center"></i><span class="ripple-wrapper"></span></button>
         </div>
         <span class="label label-success">{{username}}</span>
         <div class="checkbox checkbox-primary">
