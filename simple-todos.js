@@ -52,6 +52,20 @@ if (Meteor.isClient) {
       Meteor.call("setChecked", this._id, ! this.checked);
     },
     "click .delete": function () {
+      $node = $(node);
+
+      $node.velocity({
+        translateX: '-100%',
+        marginBottom: -$node.height()
+      }, {
+        duration: 250,
+        easing: 'ease-in',
+        queue: false,
+        complete: function() {}
+      });
+
+      $node.remove();
+
       Meteor.call("deleteTask", this._id);
     },
     "click .toggle-private": function () {
