@@ -51,9 +51,9 @@ if (Meteor.isClient) {
       // Set the checked property to the opposite of its current value
       Meteor.call("setChecked", this._id, ! this.checked);
     },
-    "click .delete": function (node, next) {
+    "click .delete": function (node) {
       var $node;
-      $node = $(node);
+      $node = $(node.ownerDocument);
 
       $node.velocity({
         translateX: '-100%',
