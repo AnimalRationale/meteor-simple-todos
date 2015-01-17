@@ -53,13 +53,14 @@ if (Meteor.isClient) {
     },
     "click .delete": function (node) {
       var $node;
-      $node = $(node.ownerDocument);
+      $node = $(node.closest('li');
+      console.log($node);
 
       $node.velocity({
         translateX: '-100%',
         marginBottom: -$node.height()
       }, {
-        duration: 250,
+        duration: 950,
         easing: 'ease-in',
         queue: false,
         complete: function() {}
