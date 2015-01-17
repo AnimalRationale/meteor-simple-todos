@@ -1,5 +1,4 @@
 Tasks = new Mongo.Collection("tasks");
-var $next, $node;
 
 if (Meteor.isClient) {
   // This code only runs on the client
@@ -52,7 +51,8 @@ if (Meteor.isClient) {
       // Set the checked property to the opposite of its current value
       Meteor.call("setChecked", this._id, ! this.checked);
     },
-    "click .delete": function () {
+    "click .delete": function (node, next) {
+      var $node;
       $node = $(node);
 
       $node.velocity({
@@ -64,7 +64,6 @@ if (Meteor.isClient) {
         queue: false,
         complete: function() {}
       });
-
       $node.remove();
 
       Meteor.call("deleteTask", this._id);
