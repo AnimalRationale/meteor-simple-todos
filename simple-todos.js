@@ -51,24 +51,7 @@ if (Meteor.isClient) {
       // Set the checked property to the opposite of its current value
       Meteor.call("setChecked", this._id, ! this.checked);
     },
-    "click .delete": function (node) {
-      var $node;
-      console.log("Node: " + node)
-      $node = $(node);
-      console.log("$node: " + $node)
-
-
-      $node.velocity({
-        translateX: '-100%',
-        marginBottom: -$node.height()
-      }, {
-        duration: 950,
-        easing: 'ease-in',
-        queue: false,
-        complete: function() {}
-      });
-      $node.remove();
-
+    "click .delete": function () {
       Meteor.call("deleteTask", this._id);
     },
     "click .toggle-private": function () {
