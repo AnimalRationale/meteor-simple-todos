@@ -53,8 +53,10 @@ if (Meteor.isClient) {
     },
     "click .delete": function (node) {
       var $node;
-      $node = $(node.closest('li');
-      console.log($node);
+      console.log("Node: " + node)
+      $node = $(node);
+      console.log("$node: " + $node)
+
 
       $node.velocity({
         translateX: '-100%',
