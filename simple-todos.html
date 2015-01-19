@@ -39,11 +39,11 @@
         </div>
     </header>
     <ul>
-        {{#transition}}
+        {{#momentum plugin = "slide-height"}}
           {{#each tasks}}
             {{> task}}
           {{/each}}
-        {{/transition}}
+        {{/momentum}}
     </ul>
 </div>
 </body>
