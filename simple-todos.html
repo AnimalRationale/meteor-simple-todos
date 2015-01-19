@@ -39,7 +39,7 @@
         </div>
     </header>
     <ul>
-        {{#momentum plugin = "slide-height"}}
+        {{#momentum plugin = "growl"}}
           {{#each tasks}}
             {{> task}}
           {{/each}}
@@ -49,7 +49,7 @@
 </body>
 
 <template name="task">
-    <li class="well fade {{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
+    <li class="well {{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
         <div>
             <button class="btn btn-default btn-fab btn-raised delete"><i class="mdi-action-delete delete-icon center"></i><span class="ripple-wrapper"></span></button>
         </div>
