@@ -12,6 +12,7 @@ hooks = {
         });
     },
     removeElement: function(node) {
+        $(node).closest("li").css( "background-color", "grey" );
         return $(node).addClass(OFFSCREEN_CLASS).on(EVENTS, function() {
             return $(node).remove();
         });
