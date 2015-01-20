@@ -39,13 +39,11 @@
         </div>
     </header>
     <ul>
-        {{#AnimateWithVelocity}}
-        <div data-animate data-property="opacity" data-duration="1900" data-from-value="0" data-to-value="1">
+        {{#momentum plugin = "slide-height"}}
           {{#each tasks}}
             {{> task}}
           {{/each}}
-            </div>
-        {{/AnimateWithVelocity}}
+        {{/momentum}}
     </ul>
 </div>
 </body>
